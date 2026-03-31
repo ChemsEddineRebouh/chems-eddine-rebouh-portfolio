@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-label: "Space Grotesk", monospace;
+
+  --color-surface: #111113;
+  --color-on-surface: #e5e1e4;
+  --color-on-surface-variant: #c2c6d6;
+  --color-surface-container-lowest: #0a0a0c;
+  --color-surface-container-low: #181719;
+  --color-surface-container: #1c1b1d;
+  --color-surface-container-high: #262628;
+  --color-surface-container-highest: #313033;
+  --color-outline-variant: #3a3f4b;
+  
+  --color-primary: #adc6ff;
+  --color-primary-container: #4d8eff;
+  --color-on-primary: #002e6a;
+  --color-on-primary-container: #00285d;
+  
+  --color-secondary: #b9c8de;
+  --color-tertiary: #ffb786;
+}
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface text-on-surface font-body selection:bg-primary/30 transition-colors duration-300;
+  }
+
+  .dark body {
+    @apply bg-surface text-on-surface;
+  }
+
+  html:not(.dark) body {
+    --color-surface: #f5f5f4;
+    --color-on-surface: #2d2d2d;
+    --color-on-surface-variant: #5c5c5c;
+    --color-surface-container-lowest: #ffffff;
+    --color-surface-container-low: #ededec;
+    --color-surface-container: #e6e6e5;
+    --color-surface-container-high: #dfdfde;
+    --color-surface-container-highest: #d8d8d7;
+    --color-outline-variant: #c7c7c6;
+    
+    --color-primary: #005ac2;
+    --color-primary-container: #d8e2ff;
+    --color-on-primary: #ffffff;
+    --color-on-primary-container: #001a42;
+    
+    @apply bg-surface text-on-surface;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-surface-container-highest/40 backdrop-blur-xl border border-outline-variant/15;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-container;
+  }
+
+  .grid-pattern {
+    background-image: radial-gradient(circle at 1px 1px, var(--color-outline-variant) 0.5px, transparent 0);
+    background-size: 40px 40px;
+    opacity: 0.2;
+  }
+}
