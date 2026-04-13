@@ -12,39 +12,41 @@ const Projects = () => {
   const { t, lang } = useApp();
   
   const projects = [
+  {
+  title: lang === 'en' ? "AI Technical Interviewer" : "Interviewer Technique IA",
+  desc: lang === 'en' ? "Full-stack application simulating real job interviews using the DeepSeek API, generating context-aware technical and behavioral questions with real-time feedback." : "Application full-stack simulant de véritables entrevues d'embauche via l'API DeepSeek, générant des questions techniques et comportementales contextuelles avec retours en temps réel.",
+  tags: ["Java", "Spring Boot", "React", "Tailwind CSS", "DeepSeek API"],
+  image: project01,
+  featured: true,
+  icon: <Smartphone size={24} />,
+  href: "https://github.com/ChemsEddineRebouh/ProjetChatBotAi"
+},
     {
-      title: lang === 'en' ? "AI Technical Interview Simulator" : "Simulateur d'Entrevue Technique IA",
-      desc: lang === 'en' ? "Intelligent conversational agent capable of conducting in-depth technical interviews, analyzing code in real-time." : "Agent conversationnel intelligent capable de mener des entrevues techniques approfondies, d'analyser le code en temps réel.",
-      tags: ["Java", "Spring Boot", "React", "Llama 3"],
-      image: project01,
-      featured: true,
-      href: "https://github.com/ChemsEddineRebouh/ProjetChatBotAi"
-    },
-    {
-      title: lang === 'en' ? "SAAQ Class 1 Mobile App" : "Application Mobile SAAQ Classe 1",
-      desc: lang === 'en' ? "Mobile solution for professional driving test preparation, with interactive simulations." : "Solution mobile pour la préparation de l'examen de conduite professionnelle, avec simulations interactives.",
-      tags: ["React Native"],
+      title: lang === 'en' ? "Class1Prep - SAAQ Mobile App" : "Class1Prep - Application Mobile SAAQ",
+      desc: lang === 'en' 
+        ? "Mobile solution for professional driving test preparation. Built with React Native and Expo, featuring interactive quizzes, local progress tracking via AsyncStorage, and Google Mobile Ads integration." 
+        : "Solution mobile pour la préparation à l'examen de conduite professionnelle. Développée avec React Native et Expo, intégrant des quiz interactifs, la sauvegarde de la progression en local via AsyncStorage et Google Mobile Ads.",
+      tags: ["React Native", "Expo", "TypeScript", "AdMob"],
       image: project02,
       icon: <Smartphone size={24} />,
       href: "https://github.com/ChemsEddineRebouh/Class1Prep"
     },
     {
-      title: lang === 'en' ? "Mobile Marketplace" : "Marketplace Mobile",
-      desc: lang === 'en' ? "P2P e-commerce platform with real-time messaging and secure payments." : "Plateforme e-commerce P2P avec messagerie temps réel et paiements sécurisés.",
-      tags: ["React Native", "Firebase"],
-      image: project03,
-      icon: <Database size={24} />,
-      href: "https://github.com/ChemsEddineRebouh/Projet-de-Marketplace-Mobile"
-    },
-    {
-      title: lang === 'en' ? "Sorting Visualizer" : "Visualiseur de Tri",
-      desc: lang === 'en' ? "Interactive tool to visualize sorting algorithms in real-time with performance metrics." : "Outil interactif pour visualiser les algorithmes de tri en temps réel avec des métriques de performance.",
-      tags: ["Java", "JavaFX"],
-      image: project04,
-      icon: <Code size={24} />, 
-      href: "https://github.com/ChemsEddineRebouh/AlgoTri"
-    }
-  ];
+  title: lang === 'en' ? "Mobile Marketplace" : "Marketplace Mobile",
+  desc: lang === 'en' ? "Mobile marketplace application featuring user authentication, product listings, and real-time data synchronization." : "Application mobile de marché en ligne avec authentification, catalogue de produits et synchronisation des données en temps réel.",
+  tags: ["React Native", "Firebase"],
+  image: project03,
+  icon: <Database size={24} />,
+  href: "https://github.com/ChemsEddineRebouh/Projet-de-Marketplace-Mobile"
+},
+{
+  title: lang === 'en' ? "Sorting Visualizer" : "Visualiseur de Tri",
+  desc: lang === 'en' ? "JavaFX application to animate the step-by-step execution of Quick Sort and Merge Sort using custom arrays." : "Application JavaFX pour animer l'exécution étape par étape du tri rapide et du tri fusion à l'aide de tableaux personnalisés.",
+  tags: ["Java", "JavaFX"],
+  image: project04,
+  icon: <Code size={24} />,
+  href: "https://github.com/ChemsEddineRebouh/AlgoTri"
+}  ];
 
   return (
     <section id="projects" className="py-24 px-8 bg-surface">
