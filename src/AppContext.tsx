@@ -12,10 +12,7 @@ interface AppContextType {
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [lang, setLang] = useState<Language>(() => {
-    const saved = localStorage.getItem('lang');
-    return (saved as Language) || 'fr';
-  });
+  const [lang, setLang] = useState<Language>('fr');
 
   const [isDark, setIsDark] = useState(() => {
     const saved = localStorage.getItem('theme');
