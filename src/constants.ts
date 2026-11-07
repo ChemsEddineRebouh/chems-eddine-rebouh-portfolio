@@ -8,28 +8,30 @@ export interface Translation {
     skills: string;
     contact: string;
     resume: string;
+    toggleTheme: string;
+    openMenu: string;
+    closeMenu: string;
+    language: string;
   };
   hero: {
-    availability: string;
     title: string;
     subtitle: string;
     description: string;
+    tagline: string;
     ctaProjects: string;
     ctaContact: string;
   };
   experience: {
     title: string;
     subtitle: string;
-    description: string;
     intern: string;
+    present: string;
   };
   projects: {
     title: string;
     subtitle: string;
-    description: string;
     viewCode: string;
-    docs: string;
-    explore: string;
+    viewAll: string;
   };
   skills: {
     title: string;
@@ -40,8 +42,15 @@ export interface Translation {
       frameworks: string;
       tools: string;
       databases: string;
+      methodologies: string;
       security: string;
       languages: string;
+    };
+    methodologies: {
+      agile: string;
+      uml: string;
+      patterns: string;
+      tdd: string;
     };
     languages: {
       french: string;
@@ -52,6 +61,7 @@ export interface Translation {
     title: string;
     subtitle: string;
     description: string;
+    responseTime: string;
     form: {
       name: string;
       email: string;
@@ -59,6 +69,20 @@ export interface Translation {
       subject: string;
       message: string;
       send: string;
+      sending: string;
+      success: string;
+      placeholders: {
+        name: string;
+        email: string;
+        phone: string;
+        subject: string;
+        message: string;
+      };
+      errors: {
+        email: string;
+        phone: string;
+        send: string;
+      };
     };
     info: {
       title: string;
@@ -69,6 +93,10 @@ export interface Translation {
   };
   footer: {
     copy: string;
+    crafted: string;
+    github: string;
+    linkedin: string;
+    email: string;
   };
 }
 
@@ -80,29 +108,31 @@ export const translations: Record<Language, Translation> = {
       experience: "Experience",
       skills: "Skills",
       contact: "Contact",
-      resume: "Resume"
+      resume: "Resume",
+      toggleTheme: "Toggle light or dark theme",
+      openMenu: "Open menu",
+      closeMenu: "Close menu",
+      language: "Language"
     },
     hero: {
-      availability: "Open for Internships & Opportunities",
-      title: "Software Engineer",
+      title: "Software Developer",
       subtitle: "Full-Stack & Mobile Development",
       description: "Chems-Eddine Rebouh. I'm a software engineering student at ÉTS Montréal dedicated to crafting high-performance mobile applications and resilient software systems with a focus on AI integration.",
+      tagline: "Passionate about the intersection of code, security, and human experience.",
       ctaProjects: "View My Projects",
       ctaContact: "Let's Talk"
     },
     experience: {
       title: "Professional",
       subtitle: "Experiences",
-      description: "A curated look at my evolution as a developer, focusing on full-stack development, agile methodologies, and scalable systems.",
-      intern: "Intern Full-Stack Developer"
+      intern: "Full-Stack Developer Intern",
+      present: "Present"
     },
     projects: {
       title: "Project",
       subtitle: "Showcase",
-      description: "A rigorous selection of software architectures and mobile applications designed for performance, scalability, and an uncompromising user experience.",
       viewCode: "View Code",
-      docs: "Documentation",
-      explore: "Explore"
+      viewAll: "View all my projects"
     },
     skills: {
       title: "Technical",
@@ -111,10 +141,17 @@ export const translations: Record<Language, Translation> = {
       categories: {
         programming: "Programming",
         frameworks: "Frameworks",
-        tools: "Tools & CI/CD",
+        tools: "Tools",
         databases: "Databases",
+        methodologies: "Methodologies",
         security: "Security & OS",
         languages: "Languages"
+      },
+      methodologies: {
+        agile: "Agile/Scrum",
+        uml: "UML",
+        patterns: "Design Patterns",
+        tdd: "TDD"
       },
       languages: {
         french: "French (Native)",
@@ -125,13 +162,28 @@ export const translations: Record<Language, Translation> = {
       title: "Get in touch",
       subtitle: "Contact Me",
       description: "I'm currently seeking new challenges and collaborative opportunities. If you have a project in mind or simply wish to discuss software development, I'd be pleased to hear from you.",
+      responseTime: "Response time: ~24 hours",
       form: {
         name: "Full Name",
         email: "Email Address",
-        phone: "Phone Number",
+        phone: "Phone Number (optional)",
         subject: "Subject",
         message: "Message",
-        send: "Send Inquiry"
+        send: "Send Message",
+        sending: "Sending...",
+        success: "Message sent successfully!",
+        placeholders: {
+          name: "John Doe",
+          email: "john@example.com",
+          phone: "514-555-5555",
+          subject: "Internship opportunity",
+          message: "Tell me about your project..."
+        },
+        errors: {
+          email: "Please enter a valid email address.",
+          phone: "Please enter a valid phone number, or leave this field empty.",
+          send: "Your message could not be sent. Please try again or email me directly."
+        }
       },
       info: {
         title: "Contact Information",
@@ -141,7 +193,11 @@ export const translations: Record<Language, Translation> = {
       }
     },
     footer: {
-      copy: "© 2024 Chems-Eddine Rebouh. Built with passion and precision."
+      copy: "Chems-Eddine Rebouh. Built with passion and precision.",
+      crafted: "Crafted with care in Montréal.",
+      github: "GitHub profile",
+      linkedin: "LinkedIn profile",
+      email: "Send an email"
     }
   },
   fr: {
@@ -151,29 +207,31 @@ export const translations: Record<Language, Translation> = {
       experience: "Expériences",
       skills: "Compétences",
       contact: "Contact",
-      resume: "CV"
+      resume: "CV",
+      toggleTheme: "Basculer entre le thème clair et sombre",
+      openMenu: "Ouvrir le menu",
+      closeMenu: "Fermer le menu",
+      language: "Langue"
     },
     hero: {
-      availability: "Disponible pour des stages et opportunités",
-      title: "Ingénieur Logiciel",
+      title: "Développeur Logiciel",
       subtitle: "Développement Full-Stack & Mobile",
       description: "Chems-Eddine Rebouh. Étudiant en génie logiciel à l'ÉTS Montréal, je me consacre à la conception d'applications mobiles performantes et de systèmes résilients, avec un accent sur l'intégration de l'IA.",
+      tagline: "Passionné par l'intersection du code, de la sécurité et de l'expérience humaine.",
       ctaProjects: "Voir mes projets",
       ctaContact: "Discutons"
     },
     experience: {
       title: "Parcours",
       subtitle: "Professionnel",
-      description: "Un regard approfondi sur mon évolution en tant que développeur, axé sur le développement full-stack, les méthodologies agiles et les systèmes évolutifs.",
-      intern: "Stagiaire Développeur Full-Stack"
+      intern: "Stagiaire développeur full-stack",
+      present: "Présent"
     },
     projects: {
       title: "Galerie de",
       subtitle: "Projets",
-      description: "Une sélection rigoureuse d'applications mobiles et de solutions logicielles conçues pour la performance, l'évolutivité et une expérience utilisateur sans compromis.",
-      viewCode: "Voir le Code",
-      docs: "Documentation",
-      explore: "Explorer"
+      viewCode: "Voir le code",
+      viewAll: "Voir tous mes projets"
     },
     skills: {
       title: "Compétences",
@@ -182,10 +240,17 @@ export const translations: Record<Language, Translation> = {
       categories: {
         programming: "Programmation",
         frameworks: "Frameworks",
-        tools: "Outils & CI/CD",
+        tools: "Outils",
         databases: "Bases de données",
+        methodologies: "Méthodologies",
         security: "Sécurité & Systèmes",
         languages: "Langues"
+      },
+      methodologies: {
+        agile: "Agile/Scrum",
+        uml: "UML",
+        patterns: "Patrons de conception",
+        tdd: "TDD"
       },
       languages: {
         french: "Français (Natif)",
@@ -196,23 +261,42 @@ export const translations: Record<Language, Translation> = {
       title: "Parlons-en",
       subtitle: "Me Contacter",
       description: "Je suis actuellement à la recherche de nouveaux défis et d'opportunités de collaboration. Si vous avez un projet en tête ou souhaitez discuter de développement logiciel, n'hésitez pas à me contacter.",
+      responseTime: "Temps de réponse : ~24 heures",
       form: {
         name: "Nom complet",
         email: "Adresse courriel",
-        phone: "Numéro de téléphone",
+        phone: "Téléphone (facultatif)",
         subject: "Sujet",
         message: "Message",
-        send: "Envoyer le message"
+        send: "Envoyer le message",
+        sending: "Envoi...",
+        success: "Message envoyé avec succès !",
+        placeholders: {
+          name: "Jean Tremblay",
+          email: "jean@exemple.com",
+          phone: "514-555-5555",
+          subject: "Offre de stage",
+          message: "Parlez-moi de votre projet..."
+        },
+        errors: {
+          email: "Veuillez entrer une adresse courriel valide.",
+          phone: "Veuillez entrer un numéro de téléphone valide ou laisser ce champ vide.",
+          send: "Votre message n'a pas pu être envoyé. Veuillez réessayer ou m'écrire directement par courriel."
+        }
       },
       info: {
         title: "Informations de contact",
-        email: "Email",
+        email: "Courriel",
         phone: "Téléphone",
         location: "Localisation"
       }
     },
     footer: {
-      copy: "© 2024 Chems-Eddine Rebouh. Conçu avec passion et précision."
+      copy: "Chems-Eddine Rebouh. Conçu avec passion et précision.",
+      crafted: "Conçu avec soin à Montréal.",
+      github: "Profil GitHub",
+      linkedin: "Profil LinkedIn",
+      email: "Envoyer un courriel"
     }
   }
 };

@@ -13,15 +13,17 @@ const Experience = () => {
       date: "2024",
       location: "Terrebonne, QC",
       points: lang === 'en' ? [
-        "Participated in functional needs analysis and technical documentation.",
-        "Developed robust application modules in JS and PHP.",
-        "Collaborated with clients to translate business needs into solutions.",
-        "Provided level 2 technical support and bug fixes."
+        "Migrated an existing client application (Laravel + Bootstrap) to a decoupled architecture (Vue.js frontend, Laravel API backend), improving load times and code maintainability.",
+        "Designed and developed application modules in JavaScript and PHP with optimized CRUD operations, ensuring data integrity through complex validations.",
+        "Translated external clients' business requirements into concrete technical solutions, working directly with them to clarify ambiguous needs before development.",
+        "Diagnosed and resolved issues in level 2 support, prioritizing recurring fixes over temporary workarounds to stabilize the application.",
+        "Worked in an Agile environment (sprints, daily stand-ups, systematic code reviews) and contributed to technical documentation (design patterns, diagrams, use cases)."
       ] : [
-        "Participation à l'analyse des besoins fonctionnels et documentation technique.",
-        "Développement de modules applicatifs robustes en JS et PHP.",
-        "Collaboration directe avec les clients pour traduire les besoins en solutions.",
-        "Support technique de niveau 2 et déploiement de correctifs."
+        "Migration d'une application cliente existante (Laravel + Bootstrap) vers une architecture découplée (Vue.js en frontend, API Laravel en backend), améliorant les temps de chargement et la maintenabilité du code.",
+        "Conception et développement de modules applicatifs en JavaScript et PHP avec des opérations CRUD optimisées, en assurant l'intégrité des données par des validations complexes.",
+        "Traduction des exigences d'affaires de clients externes en solutions techniques concrètes, en collaborant directement avec eux pour clarifier les besoins ambigus avant le développement.",
+        "Diagnostic et résolution d'anomalies en support de niveau 2, en priorisant les correctifs récurrents plutôt que des solutions temporaires pour stabiliser l'application.",
+        "Travail en environnement Agile (sprints, mêlées quotidiennes, revues de code systématiques) et contribution à la documentation technique (patrons de conception, diagrammes, cas d'usage)."
       ]
     }
   ];
@@ -30,19 +32,19 @@ const Experience = () => {
     {
       school: "ÉTS",
       degree: lang === 'en' ? "Bachelor in Software Engineering" : "Baccalauréat en génie logiciel",
-      date: "2024 - Present",
+      date: `2024 - ${t.experience.present}`,
       location: "Montréal, QC"
     },
     {
       school: "Collège Montmorency",
-      degree: lang === 'en' ? "DEC in Computer Science" : "DEC en Informatique",
+      degree: lang === 'en' ? "DEC in Computer Application Development" : "DEC en Techniques de développement d'applications informatiques",
       date: "2024",
       location: "Laval, QC"
     }
   ];
 
   return (
-    <section id="experience" className="py-24 px-8 bg-surface-container-lowest">
+    <section id="experience" className="py-24 px-6 md:px-8 bg-surface-container-lowest">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
         <div className="lg:col-span-4 space-y-12">
           <div className="space-y-4">
@@ -82,7 +84,7 @@ const Experience = () => {
                   <h3 className="text-2xl font-bold">{exp.company}</h3>
                   <p className="text-primary font-label">{exp.role}</p>
                 </div>
-                <div className="text-right">
+                <div className="md:text-right shrink-0">
                   <p className="text-on-surface-variant text-sm">{exp.date}</p>
                   <p className="text-on-surface-variant text-sm">{exp.location}</p>
                 </div>

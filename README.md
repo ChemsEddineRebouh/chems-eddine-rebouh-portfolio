@@ -28,8 +28,8 @@ Code source de mon portfolio interactif mettant en valeur mes projets et mes com
 
 1. Cloner le dépôt :
 ```bash
-git clone [https://github.com/ChemsEddineRebouh/portfolio.git](https://github.com/ChemsEddineRebouh/portfolio.git)
-cd portfolio
+git clone https://github.com/ChemsEddineRebouh/chems-eddine-rebouh-portfolio.git
+cd chems-eddine-rebouh-portfolio
 ```
 
 2. Installer les dépendances :

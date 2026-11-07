@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Code, Layers, Terminal, Database, ShieldCheck, Languages as LanguagesIcon } from 'lucide-react';
+import { Code, Layers, Terminal, Database, ShieldCheck, ListChecks, Languages as LanguagesIcon } from 'lucide-react';
 import { useApp } from '../AppContext';
 
 const Skills = () => {
@@ -10,22 +10,27 @@ const Skills = () => {
     {
       title: t.skills.categories.programming,
       icon: <Code />,
-      skills: ["Java", "Python", "JavaScript", "TypeScript", "C", "C++", "C#", "PHP", "SQL", "Kotlin"]
+      skills: ["C#", "Python", "Java", "TypeScript", "JavaScript", "PHP", "SQL", "HTML", "CSS", "Power Fx/Query", "VBA", "C", "C++", "Kotlin"]
     },
     {
       title: t.skills.categories.frameworks,
       icon: <Layers />,
-      skills: ["React", "React Native", "Node.js", "Next.js", "Nest.js", "Vue.js", "Express.js", "Laravel"]
+      skills: ["ASP.NET Core", "Spring Boot", "Laravel", "React Native", "Flutter", "Angular", "Vue.js", "Express.js", "React", "Node.js", "PyTest", "Next.js", "Nest.js"]
     },
     {
       title: t.skills.categories.tools,
       icon: <Terminal />,
-      skills: ["Git", "Docker", "Jira", "Postman", "JUnit", "Maven", "VS Code"]
+      skills: ["VS Code", "Git", "GitHub", "IntelliJ IDEA", "Postman", "PlantUML", "Docker", "Jira", "JUnit", "Maven"]
     },
     {
       title: t.skills.categories.databases,
       icon: <Database />,
-      skills: ["PostgreSQL", "MySQL", "MongoDB", "Firebase", "Supabase"]
+      skills: ["SQL Server", "SQLite", "PostgreSQL", "Firebase/Firestore", "MongoDB", "MySQL", "Supabase"]
+    },
+    {
+      title: t.skills.categories.methodologies,
+      icon: <ListChecks />,
+      skills: [t.skills.methodologies.agile, t.skills.methodologies.uml, t.skills.methodologies.patterns, t.skills.methodologies.tdd]
     },
     {
       title: t.skills.categories.languages,
@@ -35,7 +40,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-24 px-8 bg-surface">
+    <section id="skills" className="py-24 px-6 md:px-8 bg-surface">
       <div className="max-w-7xl mx-auto space-y-16">
         <div className="text-center space-y-4">
           <p className="font-label text-primary uppercase tracking-[0.3em] text-xs">{t.skills.title}</p>
@@ -43,7 +48,7 @@ const Skills = () => {
           <p className="text-on-surface-variant max-w-2xl mx-auto">{t.skills.description}</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillGroups.map((group, idx) => (
             <motion.div 
               key={group.title}
@@ -59,7 +64,7 @@ const Skills = () => {
               <h3 className="font-bold text-lg mb-4">{group.title}</h3>
               <div className="flex flex-wrap gap-2">
                 {group.skills.map(skill => (
-                  <span key={skill} className="px-3 py-1 rounded-full bg-surface-container-highest text-on-surface-variant text-[10px] font-label uppercase tracking-widest">
+                  <span key={skill} className="px-3 py-1 rounded-full bg-surface-container-highest text-on-surface-variant text-xs font-label uppercase tracking-wider">
                     {skill}
                   </span>
                 ))}
