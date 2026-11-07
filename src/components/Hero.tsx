@@ -23,15 +23,6 @@ const Hero = () => {
           <div className="lg:col-span-9 space-y-12">
             <div className="flex flex-col-reverse md:flex-row md:items-end justify-between gap-8">
               <div className="space-y-6">
-                <motion.div 
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-highest/50 border border-outline-variant/20 shadow-sm"
-                >
-                  <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-primary">{t.hero.availability}</span>
-                </motion.div>
-                
                 <motion.h1 
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}

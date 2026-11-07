@@ -55,6 +55,7 @@ export interface Translation {
     form: {
       name: string;
       email: string;
+      phone: string;
       subject: string;
       message: string;
       send: string;
@@ -84,15 +85,15 @@ export const translations: Record<Language, Translation> = {
     hero: {
       availability: "Open for Internships & Opportunities",
       title: "Software Engineer",
-      subtitle: "Building Secure Architectures",
-      description: "Chems-Eddine Rebouh. I'm a software engineering student at ÉTS Montréal dedicated to crafting high-performance mobile applications and resilient software systems with a focus on AI integration and security.",
+      subtitle: "Full-Stack & Mobile Development",
+      description: "Chems-Eddine Rebouh. I'm a software engineering student at ÉTS Montréal dedicated to crafting high-performance mobile applications and resilient software systems with a focus on AI integration.",
       ctaProjects: "View My Projects",
       ctaContact: "Let's Talk"
     },
     experience: {
       title: "Professional",
       subtitle: "Experiences",
-      description: "A curated look at my evolution as a developer, focusing on full-stack architecture, agile methodologies, and scalable systems.",
+      description: "A curated look at my evolution as a developer, focusing on full-stack development, agile methodologies, and scalable systems.",
       intern: "Intern Full-Stack Developer"
     },
     projects: {
@@ -106,7 +107,7 @@ export const translations: Record<Language, Translation> = {
     skills: {
       title: "Technical",
       subtitle: "Ecosystem",
-      description: "A structured synthesis of academic foundations and a modern technological stack, optimized for high-performance software architecture.",
+      description: "A structured synthesis of academic foundations and a modern technological stack, optimized for high-performance software development.",
       categories: {
         programming: "Programming",
         frameworks: "Frameworks",
@@ -123,7 +124,7 @@ export const translations: Record<Language, Translation> = {
     contact: {
       title: "Get in touch",
       subtitle: "Contact Me",
-      description: "I'm currently seeking new challenges and collaborative opportunities. If you have a project in mind or simply wish to discuss software architecture, I'd be pleased to hear from you.",
+      description: "I'm currently seeking new challenges and collaborative opportunities. If you have a project in mind or simply wish to discuss software development, I'd be pleased to hear from you.",
       form: {
         name: "Full Name",
         email: "Email Address",
@@ -155,21 +156,21 @@ export const translations: Record<Language, Translation> = {
     hero: {
       availability: "Disponible pour des stages et opportunités",
       title: "Ingénieur Logiciel",
-      subtitle: "Architectures Sécurisées",
-      description: "Chems-Eddine Rebouh. Étudiant en génie logiciel à l'ÉTS Montréal, je me consacre à la conception d'applications mobiles performantes et de systèmes résilients, avec un accent sur l'IA et la sécurité.",
+      subtitle: "Développement Full-Stack & Mobile",
+      description: "Chems-Eddine Rebouh. Étudiant en génie logiciel à l'ÉTS Montréal, je me consacre à la conception d'applications mobiles performantes et de systèmes résilients, avec un accent sur l'intégration de l'IA.",
       ctaProjects: "Voir mes projets",
       ctaContact: "Discutons"
     },
     experience: {
       title: "Parcours",
       subtitle: "Professionnel",
-      description: "Un regard approfondi sur mon évolution en tant que développeur, axé sur l'architecture full-stack, les méthodologies agiles et les systèmes évolutifs.",
+      description: "Un regard approfondi sur mon évolution en tant que développeur, axé sur le développement full-stack, les méthodologies agiles et les systèmes évolutifs.",
       intern: "Stagiaire Développeur Full-Stack"
     },
     projects: {
       title: "Galerie de",
       subtitle: "Projets",
-      description: "Une sélection rigoureuse d'architectures logicielles et d'applications mobiles conçues pour la performance, l'évolutivité et une expérience utilisateur sans compromis.",
+      description: "Une sélection rigoureuse d'applications mobiles et de solutions logicielles conçues pour la performance, l'évolutivité et une expérience utilisateur sans compromis.",
       viewCode: "Voir le Code",
       docs: "Documentation",
       explore: "Explorer"
@@ -177,7 +178,7 @@ export const translations: Record<Language, Translation> = {
     skills: {
       title: "Compétences",
       subtitle: "Techniques",
-      description: "Une synthèse structurée de mes fondements académiques et d'une pile technologique moderne, optimisée pour l'architecture logicielle.",
+      description: "Une synthèse structurée de mes fondements académiques et d'une pile technologique moderne, optimisée pour le développement logiciel.",
       categories: {
         programming: "Programmation",
         frameworks: "Frameworks",
@@ -194,7 +195,7 @@ export const translations: Record<Language, Translation> = {
     contact: {
       title: "Parlons-en",
       subtitle: "Me Contacter",
-      description: "Je suis actuellement à la recherche de nouveaux défis et d'opportunités de collaboration. Si vous avez un projet en tête ou souhaitez discuter d'architecture logicielle, n'hésitez pas à me contacter.",
+      description: "Je suis actuellement à la recherche de nouveaux défis et d'opportunités de collaboration. Si vous avez un projet en tête ou souhaitez discuter de développement logiciel, n'hésitez pas à me contacter.",
       form: {
         name: "Nom complet",
         email: "Adresse courriel",
